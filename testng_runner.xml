@@ -1,0 +1,29 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<!-- if we want more details to be written on the console we can increase the verbose=5 -->
+<suite name="WebOrders Automation" verbose="2">
+	
+<!--		<test name="Login tests">
+		<classes>
+			
+			<class name="com.myfitnesspal.tests.login.LoginTests">
+				<methods>
+			
+					<exclude name="invalidUserNameTest" />
+				</methods>
+			</class>
+			<class name="com.myfitnesspal.tests.login.LoginTests"></class>
+		</classes>
+	</test>
+ -->
+
+	<test name="Login tests">
+		<packages>
+			<!--running all the tests inside specific packages -->
+			
+			<package name="com.myfitnesspal.tests.login"></package>
+			<!--running all the tests inside packages, also called Batch run -->
+			<package name=".*"></package>
+		</packages>
+	</test>
+
+</suite>
