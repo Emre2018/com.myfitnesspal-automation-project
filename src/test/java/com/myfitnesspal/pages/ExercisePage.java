@@ -10,7 +10,16 @@ public class ExercisePage {
 public ExercisePage() {
 		PageFactory.initElements(Driver.getDriver(), this);
 	}
-	
+
+@FindBy(xpath="//i[@id='datepicker-trigger']")
+public WebElement calendar;
+
+@FindBy(xpath="//div[@class='diary']//span/time")
+public WebElement calendarDate;
+
+//   
+
+
 	@FindBy(id="ember1431")
 	public WebElement exerciseTab;
 	
