@@ -14,9 +14,15 @@ import com.myfitnesspal.tests.TestBase;
 import com.myfitnesspal.utilities.ConfigurationReader;
 
 public class LoginTests extends TestBase {
+<<<<<<< HEAD
 	LoginPage loginPage = new LoginPage();
 	MyHomePage loginpage = new MyHomePage();
 
+=======
+LoginPage loginPage = new LoginPage();
+	MyHomePage loginpage = new MyHomePage();
+	
+>>>>>>> 9785c408a1d903fc93119b99aa60acd6523a11fd
 	@Test(priority = 1)
 	public void getTitle() {
 		extentLogger = report.createTest("Verify title is correct");

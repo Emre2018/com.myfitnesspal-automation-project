@@ -1,18 +1,39 @@
 package com.myfitnesspal.pages;
 
+<<<<<<< HEAD
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 import com.myfitnesspal.utilities.Driver;
+=======
+import org.openqa.selenium.*;
+import org.openqa.selenium.support.*;
+
+import com.myfitnesspal.utilities.*;
+>>>>>>> 9785c408a1d903fc93119b99aa60acd6523a11fd
 
 public class ExercisePage {
 
 public ExercisePage() {
 		PageFactory.initElements(Driver.getDriver(), this);
 	}
+<<<<<<< HEAD
 	
 	@FindBy(linkText="EXERCISE")
+=======
+
+@FindBy(xpath="//i[@id='datepicker-trigger']")
+public WebElement calendar;
+
+@FindBy(xpath="//div[@class='diary']//span/time")
+public WebElement calendarDate;
+
+//   
+
+
+	@FindBy(id="ember1431")
+>>>>>>> 9785c408a1d903fc93119b99aa60acd6523a11fd
 	public WebElement exerciseTab;
 	
 	@FindBy(linkText="Add Exercise")
