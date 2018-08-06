@@ -1,12 +1,18 @@
 package com.myfitnesspal.pages;
 
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.PageFactory;
+
+import com.myfitnesspal.utilities.Driver;
+
 public class ExercisePage {
 
 public ExercisePage() {
 		PageFactory.initElements(Driver.getDriver(), this);
 	}
 	
-	@FindBy(id="ember1431")
+	@FindBy(linkText="EXERCISE")
 	public WebElement exerciseTab;
 	
 	@FindBy(linkText="Add Exercise")
