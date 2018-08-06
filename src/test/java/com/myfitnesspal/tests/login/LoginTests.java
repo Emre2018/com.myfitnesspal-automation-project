@@ -16,7 +16,7 @@ import com.myfitnesspal.utilities.ConfigurationReader;
 
 public class LoginTests extends TestBase {
 LoginPage loginPage = new LoginPage();
-	MyHomePage loginpage = new MyHomePage(driver);
+	MyHomePage loginpage = new MyHomePage();
 	
 	@Test(priority = 1)
 	public void getTitile() {

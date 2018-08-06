@@ -1,5 +1,10 @@
 package com.myfitnesspal.pages;
 
+import org.openqa.selenium.*;
+import org.openqa.selenium.support.*;
+
+import com.myfitnesspal.utilities.*;
+
 public class ExercisePage {
 
 public ExercisePage() {

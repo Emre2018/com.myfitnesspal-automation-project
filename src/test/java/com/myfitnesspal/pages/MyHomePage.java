@@ -75,6 +75,13 @@ public class MyHomePage {
 	@FindBy(xpath = "//*[@id=\"navTop\"]/li[1]")
 	public WebElement hiusermsg;
 	
+	@FindBy(partialLinkText = "EXERCISE")
+	public WebElement exerciseLink;
+	@FindBy(partialLinkText = "Add Exercise")
+	public WebElement addExerciseButton;
+	
+	
+	
 	public void login(String uid, String pwd) {
 		userName.sendKeys(uid);
 		password.sendKeys(pwd);
