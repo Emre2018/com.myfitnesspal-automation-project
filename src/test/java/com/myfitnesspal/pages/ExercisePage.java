@@ -11,6 +11,7 @@ public class ExercisePage {
 		PageFactory.initElements(Driver.getDriver(), this);
 	}
 
+
 	@FindBy(xpath = "//i[@id='datepicker-trigger']")
 	public WebElement calendar;
 
