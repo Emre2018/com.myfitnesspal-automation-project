@@ -13,6 +13,7 @@ import org.testng.annotations.Test;
 
 import com.myfitnesspal.pages.ExercisePage;
 import com.myfitnesspal.pages.LoginPage;
+import com.myfitnesspal.pages.MyHomePage;
 import com.myfitnesspal.tests.TestBase;
 import com.myfitnesspal.utilities.BrowserUtils;
 import com.myfitnesspal.utilities.Driver;
@@ -21,16 +22,22 @@ public class AddExcercise extends TestBase {
 
 	LoginPage loginPage = new LoginPage();
 	ExercisePage exercisePage = new ExercisePage();
+	MyHomePage myHomePage= new MyHomePage();
 
-	@Ignore
-	@Test(priority = 1, groups = { "smoke" })
+
+	@Test()
 	public void addExerciseNegativeTest() {
-
+		extentLogger = report.createTest("Verify negative add exercise test");
+		extentLogger.info("Logging in the website with valid credentials");
+		
 		driver.findElement(By.xpath("//li/a[.='Log In']")).click();
+		
 		loginPage.userName.sendKeys("rob123QW@gmail.com");
 		loginPage.password.sendKeys("1qazxsw2");
 		loginPage.loginButton.click();
 
+		extentLogger.info("Clicking exercise tab and searching exercise without sending anything");
+		BrowserUtils.waitForClickablility(exercisePage.exerciseTab, 10);
 		exercisePage.exerciseTab.click();
 		exercisePage.addExercise.click();
 		exercisePage.searchExercise.clear();
@@ -40,16 +47,29 @@ public class AddExcercise extends TestBase {
 		String actual = exercisePage.flashErrorText.getText();
 
 		assertEquals(actual, expected);
+		
+		extentLogger.pass("Verifies negative add exercise test is passed");
+		myHomePage.logout.click();
+		
+	
 	}
 
-	@Test(priority = 1, groups = { "smoke" })
+	@Test()
 	public void addExercisePositiveTest() {
+		extentLogger = report.createTest("Verify negative add exercise test");
+		
+		extentLogger.info("Logging in the website with valid credentials");
+				
+//		driver.findElement(By.xpath("//li/a[.='Log In']")).click();
+//		loginPage.userName.sendKeys("rob123QW@gmail.com");
+//		loginPage.password.sendKeys("1qazxsw2");
+//		loginPage.loginButton.click();
+		
+		loginPage.logIn.click();
+		loginPage.login("rob123QW@gmail.com","1qazxsw2" );
 
-		driver.findElement(By.xpath("//li/a[.='Log In']")).click();
-		loginPage.userName.sendKeys("rob123QW@gmail.com");
-		loginPage.password.sendKeys("1qazxsw2");
-		loginPage.loginButton.click();
-
+		extentLogger.info("Clicking exercise tab and searching exercise with the keyword 'run'");
+		BrowserUtils.waitForClickablility(exercisePage.exerciseTab, 10);
 		exercisePage.exerciseTab.click();
 		exercisePage.addExercise.click();
 		exercisePage.searchExercise.clear();
@@ -81,7 +101,8 @@ public class AddExcercise extends TestBase {
 		
 		assertEquals(caloriesBurnActual, caloriesBurnExpected);
 		
-		
+		extentLogger.pass("Verifies positive add exercise test is passed");
+		myHomePage.logout.click();
 	}
 
 }
