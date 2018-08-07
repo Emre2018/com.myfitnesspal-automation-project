@@ -51,18 +51,18 @@ public void testAddExerciseButton(){
 	myHomePage.logout.click();
 } 
 
-	 @Test
-	 public void testExerciseCalendar(){
-		 extentLogger = report.createTest("Test Exercise Calendar");
-		 extentLogger.info("Going to Homepage");
-		 loginPage.logIn.click();
-		loginPage.login("rob123QW@gmail.com", "1qazxsw2" );
-		extentLogger.info("Loged in");
-		myHomePage.addExerciseButton.click();
-		exercisePage.calendar.click();
-		
-	
-	 }
+//	 @Test
+//	 public void testExerciseCalendar(){
+//		 extentLogger = report.createTest("Test Exercise Calendar");
+//		 extentLogger.info("Going to Homepage");
+//		 loginPage.logIn.click();
+//		loginPage.login("rob123QW@gmail.com", "1qazxsw2" );
+//		extentLogger.info("Loged in");
+//		myHomePage.addExerciseButton.click();
+//		exercisePage.calendar.click();
+//		
+//	
+//	 }
 
 
 }

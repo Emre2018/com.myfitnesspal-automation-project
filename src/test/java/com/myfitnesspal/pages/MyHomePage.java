@@ -79,6 +79,8 @@ public class MyHomePage {
 	public WebElement exerciseLink;
 	@FindBy(partialLinkText = "Add Exercise")
 	public WebElement addExerciseButton;
+	//li[@class="first"]
+	
 	
 	
 	

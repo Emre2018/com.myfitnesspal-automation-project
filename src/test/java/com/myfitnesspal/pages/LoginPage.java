@@ -27,6 +27,8 @@ public class LoginPage {
 
 	@FindBy(partialLinkText = "Log Out")
 	public WebElement logout;
+	@FindBy(xpath = "//*[@id=\"content\"]/form/div[2]/p")
+	public WebElement invalidUserNameErrMsg;
 
 	public void login(String uid, String pwd) {
 		userName.sendKeys(uid);
