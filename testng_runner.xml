@@ -16,13 +16,13 @@
 	</test>
  -->
 
-	<test name="Login tests">
+	<test name="RegresionTest">
 		<packages>
 			<!--running all the tests inside specific packages -->
 			
 			<package name="com.myfitnesspal.tests.login"></package>
-			<!--running all the tests inside packages, also called Batch run -->
-			<package name=".*"></package>
+			<package name="com.myfitnesspal.tests.exercise"></package>
+			<package name="com.myfitnesspal.tests"></package>
 		</packages>
 	</test>
 
