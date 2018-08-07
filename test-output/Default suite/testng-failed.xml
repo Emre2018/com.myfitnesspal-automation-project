@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
+  <test thread-count="5" name="Default test(failed)">
+    <classes>
+      <class name="com.myfitnesspal.tests.MyHomePageTests">
+        <methods>
+          <include name="tearDownTest"/>
+          <include name="setUp"/>
+          <include name="setUpTest"/>
+          <include name="SPA1100"/>
+          <include name="SPA1112"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- com.myfitnesspal.tests.MyHomePageTests -->
+    </classes>
+  </test> <!-- Default test(failed) -->
+</suite> <!-- Failed suite [Default suite] -->
